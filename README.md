@@ -1,9 +1,19 @@
 # No Items Level Requirements mod for Cyberpunk 2077
 A mod to Cyberpunk 2077 that removes items level requirements.
+It can be configured to add attribute requirements instead.
 
 ## Description
 
 Thanks to this mod you can equip items that the game would not allow you to equip due to too low player level.
+The mod can be configured so that it adds attribute requirements for weapons when it removes level requirements. Attribute requirements are allowing to equip items, but may affect negatively their stats if the required attribute level is not met.
+
+### Configuration
+
+By default the mod is just removing level requirement. You can choose to replace level requirement with attribute requirement by editing `config.json` file in `bin\x64\plugins\cyber_engine_tweaks\mods\no_items_level_req` and changing the `"useAttributeRequirements"` value from `false` to `true`.
+
+When using attribute requirements is on then weapons that had level requirement will get either Strength or Reflexes attribute requirement, depending on the type of the weapon. The mapping can be found in `itemTypesBasedOnStrength` and `itemTypesBasedOnReflexes` tables in `init.lua` file.
+
+The value of an attribute requirement depends on level requirement. Formula to translate level value to attribute value can be found in `mapLevelValueToAttributeValue` function in `init.lua`.
 
 ## Dependencies
 

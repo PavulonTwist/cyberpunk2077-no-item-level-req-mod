@@ -39,3 +39,7 @@ luac.out
 *.x86_64
 *.hex
 
+# MOD specific files
+__folder_managed_by_vortex
+db.sqlite3
+*.log
