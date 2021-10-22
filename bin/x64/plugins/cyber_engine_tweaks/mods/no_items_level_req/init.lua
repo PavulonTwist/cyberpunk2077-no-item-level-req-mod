@@ -1,7 +1,7 @@
  ---Removes level requirement from an item
  ---@param item gameItemData
  local function removeLevelRequirementForItem(item)
-	if item.HasStatData(gamedataStatType.Level) then
+	if item:HasStatData(gamedataStatType.Level) then
 		Game.GetStatsSystem():RemoveAllModifiers(item:GetStatsObjectID(), gamedataStatType.Level, true)
 	end
 end
